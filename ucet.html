@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Moje objednávky | Náhradní díly ATMOS</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  >
+
+  <link href="css/atmos.css" rel="stylesheet">
+</head>
+
+<body class="account-page">
+  <a class="visually-hidden-focusable skip-link" href="#obsah">
+    Přejít na obsah
+  </a>
+
+  <header>
+    <!-- Informační lišta -->
+    <div class="service-bar">
+      <div class="container d-flex justify-content-between gap-3">
+        <span>Doprava zdarma při nákupu nad 3 000 Kč</span>
+
+        <span class="d-none d-md-inline">
+          Poradíme s výběrem •
+          <a href="tel:+420775622880">+420 775 622 880</a>
+          • Po-Pá 8:00-16:00
+        </span>
+      </div>
+    </div>
+
+    <!-- Logo, hledání, účet a košík -->
+    <div class="container main-bar">
+      <a
+        class="brand"
+        href="index.html"
+        aria-label="ATMOS – úvodní stránka"
+      >
+        <img
+          src="assets/logo.svg"
+          width="260"
+          height="62"
+          alt="ATMOS – Náhradní díly pro kotle"
+        >
+      </a>
+
+      <form
+        class="search-bar"
+        role="search"
+        action="/hledat"
+        method="get"
+      >
+        <label class="visually-hidden" for="search">
+          Hledat náhradní díl
+        </label>
+
+        <button type="submit" aria-label="Vyhledat">
+          <i class="bi bi-search" aria-hidden="true"></i>
+        </button>
+
+        <input
+          id="search"
+          name="q"
+          type="search"
+          placeholder="Hledat díl, typ kotle nebo objednací číslo…"
+        >
+      </form>
+
+      <div class="header-actions d-flex gap-4">
+        <a
+          href="ucet.html"
+          aria-label="Můj účet"
+          aria-current="page"
+        >
+          <i class="bi bi-person" aria-hidden="true"></i>
+          <span>Můj účet</span>
+        </a>
+
+        <a href="kosik.html" aria-label="Košík, 0 Kč">
+          <i class="bi bi-cart3" aria-hidden="true"></i>
+          <span>Košík 0 Kč</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigace -->
+    <nav
+      class="navbar navbar-expand-lg site-nav"
+      aria-label="Hlavní navigace"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navigation"
+          aria-controls="navigation"
+          aria-expanded="false"
+          aria-label="Zobrazit navigaci"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="katalog.html">
+                <i class="bi bi-grid" aria-hidden="true"></i>
+                Všechny náhradní díly
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/podle-typu-kotle">
+                Podle typu kotle
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/kategorie/ventilatory">
+                Ventilátory
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/kategorie/tesneni">
+                Těsnění
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/kategorie/keramika">
+                Keramika
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/kategorie/regulace">
+                Regulace a elektro
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/kategorie/cerpadla">
+                Čerpadla
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/poradna">Poradna</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="obsah" class="account-main">
+    <div class="container">
+      <!-- Drobečková navigace -->
+      <nav aria-label="Drobečková navigace">
+        <ol class="breadcrumb account-breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="index.html">Domů</a>
+          </li>
+
+          <li class="breadcrumb-item">
+            <a href="/ucet">Můj účet</a>
+          </li>
+
+          <li class="breadcrumb-item active" aria-current="page">
+            Objednávky
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Úvod -->
+      <div class="account-intro">
+        <h1>Můj účet</h1>
+
+        <p>
+          Vítejte zpět, pane Nováku. Všechny vaše objednávky najdete
+          na jednom místě.
+        </p>
+      </div>
+
+      <div class="account-layout">
+        <!-- Navigace zákaznického účtu -->
+        <aside class="account-sidebar" aria-label="Zákaznický účet">
+          <div class="account-customer">
+            <p class="account-customer-name">Jan Novák</p>
+
+            <p class="account-customer-email">
+              jan.novak@email.cz
+            </p>
+          </div>
+
+          <nav class="account-navigation" aria-label="Navigace účtu">
+            <ul>
+              <li>
+                <a
+                  class="account-nav-link is-active"
+                  href="ucet.html"
+                  aria-current="page"
+                >
+                  <i class="bi bi-box-seam" aria-hidden="true"></i>
+                  <span>Moje objednávky</span>
+                  <span class="account-nav-dot" aria-hidden="true"></span>
+                </a>
+              </li>
+
+              <li>
+                <a class="account-nav-link" href="/ucet/osobni-udaje">
+                  <i class="bi bi-person" aria-hidden="true"></i>
+                  <span>Osobní údaje</span>
+                </a>
+              </li>
+
+              <li>
+                <a class="account-nav-link" href="/ucet/adresy">
+                  <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                  <span>Moje adresy</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Odhlášení zpracuje server. Doplň ochranu CSRF. -->
+          <form
+            class="account-logout-form"
+            action="/ucet/odhlasit"
+            method="post"
+          >
+            <button class="account-nav-link" type="submit">
+              <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+              <span>Odhlásit se</span>
+            </button>
+          </form>
+        </aside>
+
+        <!-- Přehled objednávek -->
+        <section
+          class="account-orders"
+          aria-labelledby="account-orders-title"
+        >
+          <div class="account-section-heading">
+            <h2 id="account-orders-title">Moje objednávky</h2>
+
+            <p>
+              Sledujte stav objednávek. Podrobnosti a faktury najdete
+              v jejich detailu.
+            </p>
+          </div>
+
+          <div class="account-orders-card">
+            <div
+              class="table-responsive account-table-scroll"
+              role="region"
+              aria-label="Přehled objednávek, na menších displejích lze posouvat vodorovně"
+              tabindex="0"
+            >
+              <table class="account-orders-table">
+                <caption class="visually-hidden">
+                  Přehled pěti objednávek od nejnovějších,
+                  jejich stav a celková cena včetně DPH.
+                </caption>
+
+                <thead>
+                  <tr>
+                    <th scope="col">Objednávka</th>
+                    <th scope="col">Datum vytvoření</th>
+                    <th scope="col">Stav objednávky</th>
+                    <th scope="col" class="account-price-column">
+                      Celkem s DPH
+                    </th>
+                    <th scope="col">
+                      <span class="visually-hidden">Akce</span>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- Objednávka 1 -->
+                  <tr>
+                    <th scope="row">
+                      <span class="account-order-number">
+                        #2026-00847
+                      </span>
+                      <span class="account-order-description">
+                        Těsnící šňůra, ventilátor a termostat
+                      </span>
+                    </th>
+
+                    <td>
+                      <time datetime="2026-10-21">21. 10. 2026</time>
+                    </td>
+
+                    <td>
+                      <span class="account-status account-status-processing">
+                        <span aria-hidden="true"></span>
+                        Zpracovává se
+                      </span>
+                    </td>
+
+                    <td class="account-order-price">4 913 Kč</td>
+
+                    <td class="account-order-action">
+                      <a
+                        class="account-detail-link"
+                        href="/ucet/objednavky/2026-00847"
+                        aria-label="Detail objednávky 2026-00847"
+                      >
+                        Detail objednávky
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- Objednávka 2 -->
+                  <tr>
+                    <th scope="row">
+                      <span class="account-order-number">
+                        #2026-00812
+                      </span>
+                      <span class="account-order-description">
+                        Keramická tryska DC 25–32
+                      </span>
+                    </th>
+
+                    <td>
+                      <time datetime="2026-10-19">19. 10. 2026</time>
+                    </td>
+
+                    <td>
+                      <span class="account-status account-status-shipped">
+                        <span aria-hidden="true"></span>
+                        Odesláno
+                      </span>
+                    </td>
+
+                    <td class="account-order-price">1 739 Kč</td>
+
+                    <td class="account-order-action">
+                      <a
+                        class="account-detail-link"
+                        href="/ucet/objednavky/2026-00812"
+                        aria-label="Detail objednávky 2026-00812"
+                      >
+                        Detail objednávky
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- Objednávka 3 -->
+                  <tr>
+                    <th scope="row">
+                      <span class="account-order-number">
+                        #2026-00635
+                      </span>
+                      <span class="account-order-description">
+                        Těsnící šňůra dvířek 18 × 18 mm
+                      </span>
+                    </th>
+
+                    <td>
+                      <time datetime="2026-09-12">12. 9. 2026</time>
+                    </td>
+
+                    <td>
+                      <span class="account-status account-status-delivered">
+                        <span aria-hidden="true"></span>
+                        Doručeno
+                      </span>
+                    </td>
+
+                    <td class="account-order-price">837 Kč</td>
+
+                    <td class="account-order-action">
+                      <a
+                        class="account-detail-link"
+                        href="/ucet/objednavky/2026-00635"
+                        aria-label="Detail objednávky 2026-00635"
+                      >
+                        Detail objednávky
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- Objednávka 4 -->
+                  <tr>
+                    <th scope="row">
+                      <span class="account-order-number">
+                        #2026-00318
+                      </span>
+                      <span class="account-order-description">
+                        Termostat spalin 0–300 °C
+                      </span>
+                    </th>
+
+                    <td>
+                      <time datetime="2026-05-06">6. 5. 2026</time>
+                    </td>
+
+                    <td>
+                      <span class="account-status account-status-delivered">
+                        <span aria-hidden="true"></span>
+                        Doručeno
+                      </span>
+                    </td>
+
+                    <td class="account-order-price">994 Kč</td>
+
+                    <td class="account-order-action">
+                      <a
+                        class="account-detail-link"
+                        href="/ucet/objednavky/2026-00318"
+                        aria-label="Detail objednávky 2026-00318"
+                      >
+                        Detail objednávky
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <!-- Objednávka 5 -->
+                  <tr>
+                    <th scope="row">
+                      <span class="account-order-number">
+                        #2025-01142
+                      </span>
+                      <span class="account-order-description">
+                        Ventilátor odtahový UCJ4C52
+                      </span>
+                    </th>
+
+                    <td>
+                      <time datetime="2025-11-18">18. 11. 2025</time>
+                    </td>
+
+                    <td>
+                      <span class="account-status account-status-delivered">
+                        <span aria-hidden="true"></span>
+                        Doručeno
+                      </span>
+                    </td>
+
+                    <td class="account-order-price">3 290 Kč</td>
+
+                    <td class="account-order-action">
+                      <a
+                        class="account-detail-link"
+                        href="/ucet/objednavky/2025-01142"
+                        aria-label="Detail objednávky 2025-01142"
+                      >
+                        Detail objednávky
+                        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="account-orders-footer">
+              <span>Zobrazeno všech 5 objednávek</span>
+              <span>Od nejnovějších</span>
+            </div>
+          </div>
+
+          <!-- Pomoc -->
+          <aside class="account-help" aria-labelledby="account-help-title">
+            <span class="account-help-icon" aria-hidden="true">
+              <i class="bi bi-telephone"></i>
+            </span>
+
+            <div class="account-help-copy">
+              <h3 id="account-help-title">
+                Potřebujete poradit s objednávkou?
+              </h3>
+
+              <p>
+                Zavolejte nám na
+                <a href="tel:+420775622880">+420 775 622 880</a>.
+                Jsme tu Po-Pá 8:00-16:00.
+              </p>
+            </div>
+
+            <a class="account-help-link" href="/kontakt">
+              Kontaktujte nás
+            </a>
+          </aside>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Zápatí -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 footer-columns">
+        <div class="col-md-5 col-lg-4">
+          <h2>DÍLY PRO KOTLE ATMOS</h2>
+
+          <p>
+            Náhradní díly pro zplynovací kotle ATMOS,
+            odborné poradenství a rychlé odeslání z českého skladu.
+          </p>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h3>Nákup</h3>
+          <ul>
+            <li><a href="katalog.html">Náhradní díly</a></li>
+            <li><a href="/doprava-a-platba">Doprava a platba</a></li>
+            <li><a href="/reklamace">Reklamace</a></li>
+            <li><a href="/obchodni-podminky">Obchodní podmínky</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h3>Pomoc</h3>
+          <ul>
+            <li><a href="/jak-vybrat-dil">Jak vybrat díl</a></li>
+            <li><a href="/poradna">Poradna</a></li>
+            <li><a href="/kontakt">Kontakt</a></li>
+            <li><a href="/caste-dotazy">Časté dotazy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-2">
+          <h3>Kontakt</h3>
+          <ul>
+            <li>
+              <a href="tel:+420775622880">+420 775 622 880</a>
+            </li>
+            <li>
+              <a href="mailto:info@nahradni-dily-kotle.cz">
+                info@nahradni-dily-kotle.cz
+              </a>
+            </li>
+            <li>Po-Pá 8:00-16:00</li>
+          </ul>
+
+          <address>
+            691 83 Drnholec<br>
+            Česká republika
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Díly pro ATMOS</span>
+        <span>Bezpečný nákup • Ověřený obchod • Platba kartou</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

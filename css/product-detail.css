@@ -1,0 +1,481 @@
+DETAIL PRODUKTU
+   Doplněk ke společným stylům
+   ========================================== */
+
+.product-detail-page {
+  --detail-accent: #ff4338;
+  --detail-accent-hover: #df3027;
+  --detail-success: #278564;
+}
+
+/* Hlavní obsah a drobečková navigace */
+
+.product-detail-page .detail-main {
+  padding: 42px 0;
+}
+
+.product-detail-page .detail-breadcrumb {
+  --bs-breadcrumb-divider: "/";
+  margin: 0 0 36px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.product-detail-page .detail-breadcrumb a,
+.product-detail-page .detail-breadcrumb .active,
+.product-detail-page .detail-breadcrumb .breadcrumb-item::before {
+  color: var(--muted);
+}
+
+.product-detail-page .detail-breadcrumb a:hover {
+  color: var(--navy);
+}
+
+/* Dvousloupcové rozložení */
+
+.product-detail-page .detail-product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 610fr) minmax(0, 630fr);
+  align-items: start;
+  gap: 56px;
+}
+
+.product-detail-page .detail-gallery,
+.product-detail-page .detail-product-info {
+  min-width: 0;
+}
+
+/* Galerie */
+
+.product-detail-page .detail-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.product-detail-page .detail-thumbnail {
+  display: block;
+  width: 84px;
+  height: 84px;
+  padding: 3px;
+  overflow: hidden;
+  border: 1px solid #e2e7f0;
+  border-radius: 8px;
+  background: white;
+  transition: border-color 0.2s;
+}
+
+.product-detail-page .detail-thumbnail.is-active,
+.product-detail-page .detail-thumbnail:hover {
+  border-color: var(--detail-accent);
+}
+
+.product-detail-page .detail-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-detail-page .detail-main-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 610 / 520;
+  overflow: hidden;
+  border-radius: 20px;
+  background: white;
+}
+
+.product-detail-page .detail-main-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dostupnost a název */
+
+.product-detail-page .detail-stock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 16px;
+  color: var(--detail-success);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.product-detail-page .detail-stock-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--detail-success);
+}
+
+.product-detail-page .detail-product-info h1 {
+  max-width: none;
+  margin: 0 0 16px;
+  color: var(--navy);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+}
+
+.product-detail-page .detail-product-code {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-detail-page .detail-summary {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Kompatibilita */
+
+.product-detail-page .detail-compatibility {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: var(--lavender);
+}
+
+.product-detail-page .detail-compatibility h2 {
+  margin: 0 0 7px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+.product-detail-page .detail-compatibility p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Cena */
+
+.product-detail-page .detail-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 18px;
+}
+
+.product-detail-page .detail-price-value {
+  color: var(--navy);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+.product-detail-page .detail-price-tax {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Nákupní formulář */
+
+.product-detail-page .detail-purchase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.product-detail-page .detail-quantity {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  overflow: hidden;
+  border: 1px solid #dce3ed;
+  border-radius: 24px;
+  background: white;
+}
+
+.product-detail-page .detail-quantity button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-size: 17px;
+}
+
+.product-detail-page .detail-quantity button:hover {
+  background: var(--page);
+}
+
+.product-detail-page .detail-quantity input {
+  width: 40px;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--navy);
+  font: inherit;
+  font-size: 13px;
+  text-align: center;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.product-detail-page .detail-quantity input::-webkit-inner-spin-button,
+.product-detail-page .detail-quantity input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.product-detail-page .detail-quantity:focus-within {
+  outline: 3px solid #1e3a5f26;
+  outline-offset: 3px;
+}
+
+.product-detail-page .detail-add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 50px;
+  padding: 14px 26px;
+  border-radius: 28px;
+  background: var(--detail-accent);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 5px 14px #ff43381a;
+}
+
+.product-detail-page .detail-add-to-cart i {
+  margin: 0;
+}
+
+.product-detail-page .detail-add-to-cart:hover,
+.product-detail-page .detail-add-to-cart:focus-visible {
+  background: var(--detail-accent-hover);
+  color: white;
+}
+
+/* Výhody nákupu */
+
+.product-detail-page .detail-assurances {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.product-detail-page .detail-assurances li {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.product-detail-page .detail-assurances i {
+  color: var(--muted);
+}
+
+/* Popis a technické údaje */
+
+.product-detail-page .detail-description-card {
+  margin-top: 36px;
+  padding: 32px;
+  border: 1px solid #e2e7f0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 6px 18px #1e3a5f0a;
+}
+
+.product-detail-page .detail-description-card h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.4px;
+}
+
+.product-detail-page .detail-description-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.product-detail-page .detail-technical-section {
+  margin-top: 46px;
+}
+
+.product-detail-page .detail-specifications {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.product-detail-page .detail-specifications > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.product-detail-page .detail-specifications dt {
+  font-weight: 400;
+}
+
+.product-detail-page .detail-specifications dd {
+  margin: 0;
+}
+
+/* Menší desktop */
+
+@media (max-width: 1199.98px) {
+  .product-detail-page .detail-product-layout {
+    gap: 32px;
+  }
+
+  .product-detail-page .detail-product-info h1 {
+    font-size: 34px;
+  }
+
+  .product-detail-page .detail-summary {
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 991.98px) {
+  .product-detail-page .detail-main {
+    padding: 32px 0;
+  }
+
+  .product-detail-page .detail-product-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .product-detail-page .detail-gallery {
+    width: 100%;
+    max-width: 610px;
+    margin-inline: auto;
+  }
+
+  .product-detail-page .detail-product-info h1 {
+    font-size: 36px;
+  }
+
+  .product-detail-page .detail-description-card {
+    margin-top: 32px;
+  }
+}
+
+/* Mobil */
+
+@media (max-width: 575.98px) {
+  .product-detail-page .detail-main {
+    padding: 24px 0 32px;
+  }
+
+  .product-detail-page .detail-breadcrumb {
+    margin-bottom: 24px;
+    font-size: 12px;
+  }
+
+  .product-detail-page .detail-thumbnails {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .product-detail-page .detail-thumbnail {
+    width: 68px;
+    height: 68px;
+  }
+
+  .product-detail-page .detail-main-photo {
+    border-radius: 14px;
+  }
+
+  .product-detail-page .detail-product-info h1 {
+    font-size: 30px;
+    letter-spacing: -0.6px;
+  }
+
+  .product-detail-page .detail-product-code {
+    font-size: 13px;
+  }
+
+  .product-detail-page .detail-compatibility {
+    padding: 16px;
+  }
+
+  .product-detail-page .detail-price-value {
+    font-size: 32px;
+  }
+
+  .product-detail-page .detail-purchase-form {
+    align-items: stretch;
+  }
+
+  .product-detail-page .detail-quantity {
+    align-self: flex-start;
+  }
+
+  .product-detail-page .detail-add-to-cart {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .product-detail-page .detail-assurances {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 12px;
+  }
+
+  .product-detail-page .detail-description-card {
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .product-detail-page .detail-description-card h2 {
+    font-size: 23px;
+  }
+
+  .product-detail-page .detail-description-card p {
+    font-size: 14px;
+  }
+
+  .product-detail-page .detail-technical-section {
+    margin-top: 30px;
+  }
+}
+
+/* ==========================================
+   

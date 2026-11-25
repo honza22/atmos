@@ -1,0 +1,57 @@
+:root {
+  --navy: #1e3a5f;
+  --muted: #6b7a90;
+  --coral: #ff7a7a;
+  --page: #f7f8fc;
+  --lavender: #f3eef8;
+
+  --bs-body-font-family: "Inter", sans-serif;
+  --bs-body-color: var(--navy);
+  --bs-body-bg: var(--page);
+  --bs-link-color: var(--navy);
+  --bs-link-hover-color: #b54651;
+}
+
+/* Základ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+button,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #ba4755;
+  outline-offset: 4px;
+}
+
+.container {
+  max-width: 1320px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 20;
+  background: white;
+  padding: 12px;
+}
+

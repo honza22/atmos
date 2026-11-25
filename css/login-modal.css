@@ -1,0 +1,342 @@
+PŘIHLAŠOVACÍ MODAL
+   Doplněk ke společným stylům
+   ========================================== */
+
+.atmos-login-modal {
+  --bs-modal-width: 480px;
+  --bs-modal-bg: #fff;
+  --bs-modal-border-width: 0;
+  --bs-modal-border-radius: 20px;
+  --bs-modal-box-shadow: 0 24px 70px #07152e33;
+
+  color: var(--navy, #1e3a5f);
+}
+
+.atmos-login-modal [hidden] {
+  display: none !important;
+}
+
+.atmos-login-modal .modal-content {
+  border: 0;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 24px 70px #07152e33;
+}
+
+.atmos-login-modal .login-modal-body {
+  padding: 40px;
+}
+
+/* Ztmavení a rozmazání pozadí */
+
+body.atmos-login-open .modal-backdrop {
+  background: #0d1a38;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+body.atmos-login-open .modal-backdrop.show {
+  opacity: 0.7;
+}
+
+/* Logo a zavření */
+
+.atmos-login-modal .login-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 36px;
+}
+
+.atmos-login-modal .login-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  color: var(--navy, #1e3a5f);
+}
+
+.atmos-login-modal .login-wordmark-name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.3px;
+}
+
+.atmos-login-modal .login-wordmark-description {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+  color: var(--muted, #6b7a90);
+  font-size: 8px;
+  line-height: 1.3;
+}
+
+.atmos-login-modal .login-wordmark-description > span {
+  width: 16px;
+  height: 1px;
+  flex-shrink: 0;
+  background: var(--coral, #ff7a7a);
+}
+
+.atmos-login-modal .login-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  padding: 0;
+  border: 1px solid #e1e7f1;
+  border-radius: 50%;
+  background: var(--page, #f7f8fc);
+  color: var(--navy, #1e3a5f);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.atmos-login-modal .login-close-button:hover {
+  border-color: #bbc8d9;
+  background: #edf1f8;
+}
+
+/* Titulek a popis */
+
+.atmos-login-modal .login-modal-intro {
+  margin-top: 32px;
+}
+
+.atmos-login-modal .login-modal-intro h2 {
+  margin: 0 0 4px;
+  color: var(--navy, #1e3a5f);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+.atmos-login-modal .login-modal-intro p {
+  margin: 0;
+  color: var(--muted, #6b7a90);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Formulář */
+
+.atmos-login-modal .login-form {
+  margin-top: 32px;
+}
+
+.atmos-login-modal .login-field-group + .login-field-group {
+  margin-top: 20px;
+}
+
+.atmos-login-modal .login-label {
+  display: block;
+  margin: 0 0 8px;
+  color: var(--navy, #1e3a5f);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.atmos-login-modal .form-control {
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #dce4f0;
+  border-radius: 8px;
+  color: var(--navy, #1e3a5f);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.atmos-login-modal .form-control::placeholder {
+  color: #7e8da3;
+  opacity: 1;
+}
+
+.atmos-login-modal .login-email-input {
+  background: var(--page, #f7f8fc);
+}
+
+.atmos-login-modal .form-control:focus {
+  border-color: var(--navy, #1e3a5f);
+  box-shadow: 0 0 0 3px #1e3a5f14;
+}
+
+/* Heslo */
+
+.atmos-login-modal .login-password-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 8px;
+}
+
+.atmos-login-modal .login-password-heading .login-label {
+  margin: 0;
+}
+
+.atmos-login-modal .login-forgot-link {
+  color: var(--muted, #6b7a90);
+  font-size: 13px;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.atmos-login-modal .login-forgot-link:hover {
+  color: var(--navy, #1e3a5f);
+}
+
+.atmos-login-modal .login-password-field {
+  position: relative;
+}
+
+.atmos-login-modal .login-password-field .form-control {
+  padding-right: 48px;
+  border-color: var(--navy, #1e3a5f);
+  background: white;
+}
+
+.atmos-login-modal .login-password-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0 8px 8px 0;
+  background: transparent;
+  color: var(--navy, #1e3a5f);
+  font-size: 17px;
+}
+
+.atmos-login-modal .login-password-toggle:hover {
+  background: #1e3a5f08;
+}
+
+/* Chybová zpráva */
+
+.atmos-login-modal .login-error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid #f1c3c8;
+  border-radius: 8px;
+  background: #fff3f4;
+  color: #a22e3b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Přihlášení a registrace */
+
+.atmos-login-modal .login-form-actions {
+  margin-top: 32px;
+}
+
+.atmos-login-modal .login-submit-button,
+.atmos-login-modal .login-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.atmos-login-modal .login-submit-button {
+  border: 1px solid var(--navy, #1e3a5f);
+  background: var(--navy, #1e3a5f);
+  color: white;
+}
+
+.atmos-login-modal .login-submit-button:hover,
+.atmos-login-modal .login-submit-button:focus-visible {
+  border-color: #2c507e;
+  background: #2c507e;
+  color: white;
+}
+
+.atmos-login-modal .login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 16px 0;
+  color: var(--muted, #6b7a90);
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.atmos-login-modal .login-divider::before,
+.atmos-login-modal .login-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #e1e7f1;
+}
+
+.atmos-login-modal .login-register-button {
+  border: 1px solid #dce4f0;
+  background: white;
+  color: var(--navy, #1e3a5f);
+}
+
+.atmos-login-modal .login-register-button:hover,
+.atmos-login-modal .login-register-button:focus-visible {
+  border-color: var(--navy, #1e3a5f);
+  background: var(--page, #f7f8fc);
+  color: var(--navy, #1e3a5f);
+}
+
+/* Mobil */
+
+@media (max-width: 575.98px) {
+  .atmos-login-modal .modal-dialog {
+    margin: 16px;
+  }
+
+  .atmos-login-modal .modal-content {
+    border-radius: 16px;
+  }
+
+  .atmos-login-modal .login-modal-body {
+    padding: 28px 24px;
+  }
+
+  .atmos-login-modal .login-modal-intro,
+  .atmos-login-modal .login-form,
+  .atmos-login-modal .login-form-actions {
+    margin-top: 26px;
+  }
+
+  .atmos-login-modal .login-modal-intro h2 {
+    font-size: 26px;
+  }
+
+  .atmos-login-modal .login-modal-intro p {
+    font-size: 13px;
+  }
+
+  .atmos-login-modal .login-forgot-link {
+    font-size: 12px;
+  }
+
+  .atmos-login-modal .form-control {
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   

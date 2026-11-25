@@ -1,0 +1,27 @@
+/* Navigace */
+
+.site-nav {
+  min-height: 52px;
+  padding: 0;
+  border-top: 1px solid #edf0f5;
+}
+
+.navbar-nav {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.site-nav .nav-link {
+  padding: 16px 0;
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.site-nav .nav-link:hover {
+  color: #b54651;
+}
+
+.site-nav .bi-grid {
+  margin-right: 8px;
+}
+

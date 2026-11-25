@@ -1,0 +1,17 @@
+@import "base.css";
+@import "header.css";
+@import "navigation.css";
+@import "homepage.css";
+@import "buttons.css";
+@import "categories.css";
+@import "products.css";
+@import "help-sections.css";
+@import "footer.css";
+
+@import "catalog.css";
+@import "product-detail.css";
+@import "cart.css";
+@import "checkout.css";
+@import "confirmation.css";
+@import "login-modal.css";
+@import "account.css";
